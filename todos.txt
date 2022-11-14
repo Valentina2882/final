@@ -1,0 +1,485 @@
+#Programa 1
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int resultado;
+		Console.WriteLine("Bienvenido usuario, ingrese un número.");
+		int numero = int.Parse(Console.ReadLine());
+		resultado=numero*2*25;
+		Console.WriteLine("El resultado es: "+ resultado);
+	}
+}
+
+#Programa 2
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int producto;
+		int suma;
+		int promedio;
+		Console.WriteLine("Bienvenido usuario, ingrese cuatro números.");
+		int num1 = int.Parse(Console.ReadLine());
+		int num2 = int.Parse(Console.ReadLine());
+		int num3 = int.Parse(Console.ReadLine());
+		int num4 = int.Parse(Console.ReadLine());
+		producto = num1*num2*num3*num4;
+		suma= num1+num2+num3+num4;
+		promedio= suma/4;
+		Console.WriteLine("El producto o multiplicación de todos los números es: "+ producto);
+		Console.WriteLine("La suma de todos los número es: "+ suma);
+		Console.WriteLine("El promedio es: " + promedio);
+	}
+}
+
+#Programa 3
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		double numero;
+		numero= Math.Pow(821,2);
+		Console.WriteLine(numero);
+	}
+}
+
+#Programa 4
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int numeroz = 0;
+		for (int i = 1; i < 11; i++) { 
+              numeroz = i * (i + 1) / 2;
+		}
+		Console.WriteLine("La suma de los numeros del 1 al 10 es: " + numeroz);
+	}
+}
+
+#Programa 5
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		double numeroz;
+		for (int i = 0; i < 11; i++) { 
+			numeroz=Math.Pow(2,i);
+			Console.WriteLine(numeroz);
+		}
+
+	}
+}
+
+cap 3
+
+namespace ejercicios
+{
+    public class calse
+    {
+        public static void Main()
+        {
+            double preciofinal = 0;
+            double IVA = 0.12;
+            double precio;
+            double preciobruto;
+            double precioiva;
+            double cantidad;
+            double factura;
+            
+            Console.WriteLine("Digite un precio :)");
+            precio = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite la cantidad del producto que quiere.");   
+            cantidad = int.Parse(Console.ReadLine());
+
+            preciobruto = precio * cantidad;
+            precioiva = preciobruto * IVA;
+
+            
+            factura = preciobruto + precioiva;
+
+            if (preciobruto > 50000)
+            {
+                double condescuento = factura * 0.5;
+                preciofinal =  factura - condescuento;
+                
+            }
+            else
+            {
+                preciofinal = factura;
+                
+            }
+
+            Console.WriteLine("El precio a pagar es de: " + preciofinal);
+        }
+    }
+}
+
+
+3.1
+
+namespace ejercicios
+{
+    public class program
+    {
+        public static void Main()
+        {
+            int num1;
+            int num2;
+
+            Console.WriteLine("Ingrese dos números y le mostraremos el número mayor de los dos en pantalla.");
+            Console.WriteLine("Ingrese el primer número");
+            num1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingrese el segundo número");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1>num2)
+            {
+                Console.WriteLine("El número mayor es: ” + num1);
+            }
+            else if (num2>num1)
+            {
+                Console.WriteLine("El número mayor es:” + num2);
+            }
+        }
+    }
+}
+
+3.2
+
+namespace ejercicio32
+{
+   class program
+    {
+        static void Main(String[] args)
+        { 
+            Console.WriteLine("Ingrese un número:");
+            int num = int.Parse(Console.ReadLine());
+            if (num == 0)
+            {
+                Console.WriteLine("El número” + num + "es un número neutro.");
+            }
+            else if (num > 0)
+            {
+                Console.WriteLine("El número" + num + "es un número positivo.");
+            }
+            else
+            {
+                Console.WriteLine("El número" + num + "es un número negativo.");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+3.3
+
+
+namespace Ejercicios
+{
+    class ejercicio
+    {
+        static void Main()
+        {
+           double num;
+           double total;
+           Console.Write("Ingrese la cantidad de lápices: ");
+           num = Convert.ToInt32(Console.ReadLine());
+           if (num >= 1000)
+           {
+               total = num * .85;
+           }
+           else
+           {
+               total = num * .90;
+           }
+           Console.WriteLine("El total a pagar por los lápices es: $ " + total);
+        }
+    }
+}
+
+3.4
+
+namespace Ejercicios
+{
+    class program
+    {
+        static void Main()
+        {
+
+            Console.WriteLine("Ingrese el precio:");
+            double precio;
+            precio = Convert.ToDouble(Console.ReadLine());
+            if (precio > 2500)
+            {
+                double descuento;
+                descuento = precio - (precio * 0.15);
+                Console.WriteLine("El precio final con descuento del 15% es: {0}", descuento);
+            }
+            else
+            {
+                double descuento2;
+                descuento2 = precio - (precio * 0.008);
+                Console.WriteLine("El precio final con descuento del 15% es: {0}", descuento2);
+
+            }
+
+        }
+
+    }
+
+}
+
+
+3.5
+
+namespace Ejercicio
+{
+    class ejercicio
+    {
+        public static void Main(string[] args)
+        {
+            int ma = 0, me = 0, num = 0, numeros = 3;
+            for (int i = 1; i <= numeros; i++)
+            {
+                Console.WriteLine("Digite un numero: ");
+                num = int.Parse(Console.ReadLine());
+
+                if (i == 1)
+                {
+                    ma = num;
+                    me = num;
+                }
+                if (num > ma) { ma = num; }
+                if (num < me) { me = num; }
+
+                num = 0;
+            }
+         Console.WriteLine(" número mayor es: " + ma);
+         Console.WriteLine(" número menor es: " + me);
+        }
+    }
+}
+
+
+3.7
+
+namespace ejercicio
+{
+    class ejercicios
+    {
+        static void Main()
+        {
+            double CostoPlato, NumeroPersonas, presupuesto;
+            Console.Write("Ingresa el valor de número de personas: ");
+            NumeroPersonas = double.Parse(Console.ReadLine());
+            CostoPlato = 95000;
+            if (NumeroPersonas > 200 && NumeroPersonas <= 300)
+                CostoPlato = 85000;
+            if (NumeroPersonas > 300)
+                CostoPlato = 75000;
+            presupuesto = CostoPlato * NumeroPersonas;
+            Console.WriteLine("Valor de costo del plato: " + CostoPplato);
+            Console.WriteLine("Valor de presupuesto: " + presupuesto);
+            Console.WriteLine();
+            Console.Write("Presiona una tecla para terminar . . . ");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+3.8
+
+namespace ejercicios
+{
+    class Program
+    {
+        public static void Main()
+        {
+            double precioBase;
+            int tamano;
+            double precioInicial;
+
+
+            Console.WriteLine("ingrese el precio base por kilo de uva");
+            precioBase = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese el tipo (A o B) ");
+             var tipo = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Ingrese el tamaño (1 o 2) ");
+            tamano = Convert.ToInt32(Console.ReadLine());
+
+
+
+                if (tipo == "a" && tamaño ==1 || tipo == "A" && tamaño == 1)
+                {
+                precioInicial = (precioBase + 0.20);
+                Console.WriteLine(" el precio inicial por kilo de uva es de " + precioInicial);
+
+            }
+            else if (tipo == "a" && tamaño == 2 || tipo == "A" && tamaño == 2)
+            {
+                precioInicial = (precioBase + 0.30) ;
+                Console.WriteLine(" el precio inicial por kilo de uva es de " + precioInicial);
+            }
+            if (tipo == "b" && tamaño == 1 || tipo == "B" && tamaño == 1)
+            {
+                precioInicial = (precioBase - 0.30);
+                Console.WriteLine(" el precio inicial por kilo de uva es de " + precioInicial);
+            }
+            else if (tipo == "b" && tamaño == 2 || tipo == "B" && tamaño == 2)
+            {
+                precioInicial = (precioBase - 0.50);
+                Console.WriteLine(" el precio inicial por kilo de uva es de " + precioInicial);
+            }
+        }
+    }
+}
+
+3.9
+
+namespace Ejercicio
+{
+    class ejercicio
+    {
+        static void Main(string[] args)
+        {
+            int dia, turno;
+            double impuestos, minutos, subtotal, total;
+            Console.Write("Ingresa el valor en minutos: ");
+            minutos = double.Parse(Console.ReadLine());
+            Console.WriteLine("Selecciona el valor de dia.");
+            Console.WriteLine("\t1.- domingo");
+            Console.WriteLine("\t2.- activo");
+            Console.WriteLine("\t3.- inactivo");
+            Console.Write("\t: ");
+            do
+            {
+                dia = int.Parse(Console.ReadLine());
+                if (dia < 1 || dia > 3)
+                    Console.Write("Valor incorrecto. Digitelo nuevamente.: ");
+            } 
+            while (dia < 1 || dia > 3);
+            Console.WriteLine("Selecciona el valor de turno.");
+            Console.WriteLine("\t1.- matutino");
+            Console.WriteLine("\t2.- vespertino");
+            Console.Write("\t: ");
+            do
+            {
+                turno = int.Parse(Console.ReadLine());
+                if (turno < 1 || turno > 2)
+                    Console.Write("Valor incorrecto. Digite nuevamente.: ");
+            } 
+            while (turno < 1 || turno > 2);
+            subtotal = 0;
+
+            if (minutos <= 5)
+                subtotal = minutos;
+
+            if (minutos > 5 && minutos <= 8)
+                subtotal = 5.0 + (minutos - 5) * 0.8;
+
+            if (minutos > 8 && minutos <= 10)
+                subtotal = 5.0 + 3.0 * 0.8 + (minutos - 8) * 0.7;
+
+            if (minutos > 10)
+                subtotal = 5.0 + 3.0 * 0.8 + 2.0 * 0.7 + (minutos - 10) * 0.5;
+
+            impuestos = 0;
+
+            if (dia == 1)
+                impuestos = subtotal * 0.03;
+
+            if (dia == 2 && turno == 1)
+                impuestos = subtotal * 0.15;
+
+            if (dia == 2 && turno == 1)
+                impuestos = subtotal * 0.1;
+            total = subtotal + impuestos;
+            Console.WriteLine("Valor de impuestos: " + impuestos);
+            Console.WriteLine("Valor de subtotal: " + subtotal);
+            Console.WriteLine("Valor de total: " + total);
+            Console.WriteLine();
+        }
+    }
+}
+
+3.12
+
+public static void Main()
+        {
+            int citas;
+            double valor_tratamiento;
+
+            Console.WriteLine("Ingrese el numero de citas");
+            citas = Convert.ToInt32(Console.ReadLine());
+
+            if (citas <= 3)
+            {
+                valor_tratamiento = (citas * 200000);
+                Console.WriteLine("el valor de la cita es de 200.000");
+                Console.WriteLine("el gasto del tratamiento es: " + valor_tratamiento);
+            }
+            if (citas >= 4 && citas <= 5)
+            {
+                valor_tratamiento = (citas * 150000) + 600000;
+                Console.WriteLine("el valor de la cita es de 150.000");
+                Console.WriteLine("el gasto del tratamiento es: " + valor_tratamiento);
+            }
+            if (citas >= 6 && citas <= 8)
+            {
+                valor_tratamiento = (citas * 100000) + 900000;
+                Console.WriteLine("el valor de la cita es de 100.000");
+                Console.WriteLine("el gasto del tratamiento es: " + valor_tratamiento);
+            }
+            if (citas > 8)
+            {
+                valor_tratamiento = (citas * 50000) + 1200000;
+                Console.WriteLine("el valor de la cita es de 50.000");
+                Console.WriteLine("el gasto del tratamiento es: " + valor_tratamiento);
+            }
+        }
+
+
+4.5
+
+namespace Ejercicio
+{
+    class ejercicio
+    {
+        static void Main()
+        {
+            double estatura = 0;
+            suma = 0; 
+            total = 0;
+            promedio = 0;
+            Console.WriteLine("Ingrese el total de personas: ");
+            total = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= total; i++)
+            {
+                Console.WriteLine("Ingrese su estatura ({0}) : ", i);
+                estatura = Convert.ToDouble(Console.ReadLine());
+
+                suma = suma + estatura;
+                i = i + 0;
+                promedio = suma / total;
+            }
+            Console.WriteLine("El promedio de estatura es: " + promedio);
+        }
+    }
+}
